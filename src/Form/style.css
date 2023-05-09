@@ -1,0 +1,31 @@
+.form__legend {
+    background-color:#097969;
+    text-align: center;
+    color: white;
+    margin: 20px 0;
+    padding: 15px;
+    font-size: 20px;
+  }
+  
+  .form__button {
+    background-color: #097969;
+    border: none;
+    color: white;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  .form__labelText {
+    width: 100px;
+    display: inline-block;
+  }
+  
+  .form__fieldset {
+    margin: 20px 0;
+    background-color: white;
+  }
+  
+  .form__result {
+    font-size: 30px;
+    text-decoration-line: underline;
+  }

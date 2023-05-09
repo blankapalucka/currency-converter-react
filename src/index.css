@@ -1,0 +1,14 @@
+html {
+  box-sizing: border-box;
+}
+
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
+.body {
+  margin: auto;
+  font-family: "Noto Sans", sans-serif;
+  background-color: white;
+  max-width: 1000px;
+}
