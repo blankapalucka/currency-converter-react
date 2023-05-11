@@ -6,9 +6,10 @@ html {
   box-sizing: inherit;
 }
 
-.body {
+body {
   margin: auto;
   font-family: "Noto Sans", sans-serif;
   background-color: white;
   max-width: 1000px;
+  background-image: url("img/background.jpg");
 }
