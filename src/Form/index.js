@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import "./style.css";
-import { currencies } from '../currencies';
+import { currencies } from './currencies';
 import { Result } from './Result';
 
 
 export const Form = ({ calculateResult, result }) => {
-  const [currency, setCurrency] = useState(currencies[0].abbr);
+  const [currency, setCurrency] = useState(currencies[0].short);
   const [amount, setAmount] = useState("");
 
   const onSubmit = (event) => {
@@ -19,7 +19,7 @@ export const Form = ({ calculateResult, result }) => {
       <fieldset className="form__fieldset">
         <legend className="form__legend">Przelicznik walut
         </legend>
-        <p>
+        <div>
           <label>
             <span className="form__labelText">
               Kwota w zł*:
@@ -33,8 +33,8 @@ export const Form = ({ calculateResult, result }) => {
               required
               placeholder="Wpisz kwotę w zł" />
           </label>
-        </p>
-        <p>
+        </div>
+        <div>
           <label>
             <span className="form__labelText">
               Waluta:
@@ -45,27 +45,27 @@ export const Form = ({ calculateResult, result }) => {
 
               {currencies.map((currency => (
                 <option
-                  key={currency.abbr}
-                  value={currency.abbr}
+                  key={currency.short}
+                  value={currency.short}
                 >
                   {currency.name}
                 </option>
               )))}
             </select>
           </label>
-        </p>
-        <p>
-          <button className="form__button"
-            onClick={() => calculateResult(currency, amount)}>PRZELICZ</button>
-        </p>
-        <p>
+        </div>
+        <div>
+          <button className="form__button">PRZELICZ</button>
+        </div>
+        <div>
           <label>
             <span className="form__result">
+              <Result result={result} />
             </span>
           </label>
-        </p>
+        </div>
       </fieldset>
-      <Result result={result} />
+
     </form>
   );
 };
