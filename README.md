@@ -6,7 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This is a simple currency converter.
 
-![Main view](./img/main%20view.png)
+![Main view](./src/img/main_view.png)
 
 ## Technologies used in the project:
 1. HTML
