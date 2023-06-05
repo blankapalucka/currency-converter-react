@@ -29,7 +29,7 @@ const Calendar = () => {
     }, []);
 
     return (
-        
+
         <div>
             <p className="DateTime"> Dzisiaj jest {currentDateTime}</p>
         </div>
