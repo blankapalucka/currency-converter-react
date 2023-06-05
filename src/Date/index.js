@@ -1,19 +1,43 @@
 import React, { useState, useEffect } from 'react';
+import "./style.css";
 
 const Calendar = () => {
-    const [currentDate, setCurrentDate] = useState('');
-  
+    const [currentDateTime, setCurrentDateTime] = useState('');
+
     useEffect(() => {
-      const date = new Date();
-      setCurrentDate(date.toLocaleDateString(undefined,
-        { month: "long", weekday: "long", day: "numeric", year: "numeric"
-        },));
+        const updateDateTime = () => {
+            const date = new Date();
+            const formattedDate = date.toLocaleDateString(undefined, {
+                month: 'long',
+                weekday: 'long',
+                day: 'numeric',
+                year: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+            });
+            setCurrentDateTime(formattedDate);
+        };
+
+        updateDateTime();
+
+        const timer = setInterval(updateDateTime, 1000);
+
+        return () => {
+            clearInterval(timer);
+        };
     }, []);
-  
+
     return (
-      <div>
-        <p> Dzsiaj jest  {currentDate}</p>
-      </div>
+        
+        <div>
+            <p className="DateTime"> Dzisiaj jest {currentDateTime}</p>
+        </div>
     );
-  };
+};
 export default Calendar;
+
+
+
+
+
