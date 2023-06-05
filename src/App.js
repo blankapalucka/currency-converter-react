@@ -7,6 +7,7 @@ import React, { useState } from 'react';
 
 function App() {
 
+
   const [result, setResult] = useState();
 
   const calculateResult = (currency, amount) => {
@@ -22,12 +23,13 @@ function App() {
 
   return (
     <div className="body element">
+     
 
       <Form
         result={result}
         calculateResult={calculateResult}
       />
-
+ 
     </div >
   );
 };

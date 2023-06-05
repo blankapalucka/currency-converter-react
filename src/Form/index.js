@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./style.css";
 import { currencies } from './currencies';
 import { Result } from './Result';
+import Calendar from '../Date';
 
 
 export const Form = ({ calculateResult, result }) => {
@@ -15,11 +16,13 @@ export const Form = ({ calculateResult, result }) => {
 
   return (
     <form onSubmit={onSubmit}>
-
+ 
       <fieldset className="form__fieldset">
         <legend className="form__legend">Przelicznik walut
         </legend>
         <div>
+        <Calendar
+      />
           <label>
             <span className="form__labelText">
               Kwota w zł*:
