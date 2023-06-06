@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./style.css";
 import { currencies } from './currencies';
 import { Result } from './Result';
-import Calendar from '../Date';
+import Calendar from '../Calendar';
 
 
 export const Form = ({ calculateResult, result }) => {
